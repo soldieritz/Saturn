@@ -3,7 +3,7 @@ module.exports = {
     client: {
         id: "1117114618331009144",
         token: process.env.token,
-        callbackURL: "http://127.0.0.1:3000/login",
+        callbackURL: "https://saturnlist.onrender.com/login",
         scope: ["identify", "guilds.join"],
         secret: "MK8LEn6ioGob2XwCc2VB2sMSMnPibtV6"
     },
