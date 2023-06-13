@@ -1,0 +1,84 @@
+<%- include("../layout/main") %>
+  <br>
+  <center>
+    <form action="/addbot" method="post" onsubmit="return validateForm()" id="check">
+      <div class="addbot-card main-div main-div2">
+        <div class="addbot-header" style="text-align: center;">
+          <h2>Añadir Bot</h2>
+          <hr my-3>
+        </div>
+        <div class="addbot-body">
+
+          <!----------------------------------- CLIENT ID -------------------------------------------------->
+          <div class="form-group">
+            <h5>Cliente ID <span class="asteric">*</span></h5>
+            <input type="text" class="myform-control" id="clientId" name="clientId" value="<%= clientId %>"
+              placeholder="Ingresa la id de tu cliente">
+            <small class="form-text" style="color: white;">Copia la id de tu cliente y pegala aqui.</small>
+          </div>
+        </div>
+        <br>
+        <!----------------------------------- PREFIX -------------------------------------------------->
+        <div class="form-group">
+          <h5>Prefix <span class="asteric">*</span></h5>
+          <input type="text" class="myform-control" id="clientPrefix" name="clientPrefix" value="<%= clientPrefix %>"
+            placeholder="Ingresa el prefix de tu cliente" maxlength="7">
+          <small class="form-text" style="color: white;">Inicial para los comandos de tu bot ej: ! o /slash.</small>
+        </div>
+        <br>
+        <!----------------------------------- SHORT DESC -------------------------------------------------->
+        <div class="form-group">
+          <h5>Descripcion corta <span class="asteric">*</span></h5>
+          <input type="text" class="myform-control" id="clientShortDesc" value="<%= clientShortDesc %>"
+            name="clientShortDesc" placeholder="Ingresa el resumen corto de tu bot" maxlength="168">
+          <small class="form-text" style="color: white;">Un resumen de tu bot o la descripcion.</small>
+        </div>
+        <br>
+        <!----------------------------------- DESC -------------------------------------------------->
+        <div class="form-group">
+          <h5>Descripcion <span class="asteric">*</span></h5>
+          <textarea type="textarea" class="myform-control ta" id="clientDesc" name="clientDesc"
+            placeholder="Ingresa la descripcion completa de tu bot"><%= clientDesc %></textarea>
+          <small class="form-text" style="color: white;">La descripcion completa de tu bot.</small>
+        </div>
+        <br>
+        <!----------------------------------- Website -------------------------------------------------->
+        <div class="form-group">
+          <h5>Tags <span class="asteric">*</span></h5>
+          <select name="clientTags" id="clientTags" multiple
+            onchange="console.log(Array.from(this.selectedOptions).map(x=>x.value??x.text))" placeholder="Seleccionar"
+            multiselect-search="true" maxselect="1" multiselect-hide-x="true">
+            <% tags.map((tag) => {  %>
+              <% if(stags.includes(tag.value)){ %>
+      <option value="<%= tag.value %>" selected><%= tag.name %></option>
+             <% } else { %>
+              <option value="<%= tag.value %>"><%= tag.name %></option> 
+              <% } %>
+            <% })  %>
+          </select>
+          <small class="form-text" style="color: white;">Selecciona el tag de tu bot.</small>
+        </div>
+        <br>
+        <!----------------------------------- Website -------------------------------------------------->
+        <div class="form-group">
+          <h5>Servidor Soporte</h5>
+          <input type="text" class="myform-control" id="clientGuild" value="<%= clientGuild %>" name="clientGuild"
+            placeholder="Ingresa la url aqui">
+          <small class="form-text" style="color: white;">Codigo del servidor de tu bot.</small>
+        </div>
+        <br>
+        <!----------------------------------- Website -------------------------------------------------->
+        <div class="form-group">
+          <h5>Dashbaord URL</h5>
+          <input type="text" class="myform-control" id="clientDashboard" name="clientDashboard"
+            value="<%= clientDashboard %>" placeholder="Ingresa la url aqui">
+          <small class="form-text" style="color: white;">Pagina o dashboard de tu bot.</small>
+        </div>
+
+        <br>
+        <button class="check btn btn-primary" style="width: 100%;" value="Submit" type="submit">Enviar</button>
+      </div>
+      <br>
+      </div>
+    </form>
+  </center>

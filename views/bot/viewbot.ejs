@@ -1,0 +1,82 @@
+<%- include("../layout/main") %>
+<br>
+
+<div class="container text-center">
+
+<div class="row">
+  <div class="col">
+      <img src="<%= botAvatar %>" class="botAvatar">
+  </div>
+</div>
+
+<br>
+<!----------------------------------Avatar y Informacion ------------------------------------------>
+<div class="row">
+  <div class="col" id="a">
+      <h4>
+        <p style="color: white"><i class="fa-solid fa-arrow-circle-up"></i> <%= votes %></p>  <%= bot.clientInfo.username %>#<%= bot.clientInfo.discriminator %> 
+      </h4>
+      <div class="btn-group" role="group" aria-label="Basic example">
+      <a href="https://discord.com/api/oauth2/authorize?client_id=<%= bot.clientInfo.id %>&permissions=51530719690689&scope=bot%20applications.commands" class="btn btn-primary"style="border-radius: 3px;margin: 3px">Invitar</a>
+      <form action="/bot/<%= bot.clientId %>/vote" id="confirmVote" method="post">
+        <button class="btn btn-primary" type="submit" style="border-radius: 3px;margin: 3px">Votar</button>
+      </form>
+      </div>
+      <hr my-3>
+      <div class="row">
+        <div class="col">
+        <h6 class="items-row"><i class="fa-solid fa-vial"></i> Prefix: <br> 
+            <%= bot.prefix %>
+        </h6>
+        </div>
+        <div class="col">
+          <h6 class="items-row"><i class="fa-solid fa-crown"></i> Creador: <br> <a href=""><%= bot.author.username %>#<%=bot.author.discriminator%></a></h5>
+        </div>
+        <div class="col">
+          <h6 class="items-row text-truncate"><i class="fa-solid fa-hashtag"></i> Tags: <br>
+          <%bot.tags.forEach((tag) => {%>
+            <a href="/tag/<%= tag %>" class="tag">#<%= tag %></a>
+          <%})%>
+          </h6>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+<br>
+<!----------------------------------Descripcion y otros ------------------------------------------>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-8 descRow">
+      <h6 class="xd" style="white-space: pre-wrap">
+      <%= bot.desc %>
+     </h6>
+    </div>
+    <div class="col-sm-4 descRow">
+      <div class="info-content">
+      <div class="info-separador">
+         <h4> <i class="fa-solid"></i> Creador </h4>
+         <hr my-3>
+         <div class="chip">
+          <img src="<%= userAvatar %>" alt="Person" width="96" height="96">
+          <%= bot.author.username %>#<%= bot.author.discriminator %>
+        </div>
+        <br>
+        </div>
+        <!------------------------------------------------------->
+        <br>
+        <div class="info-separador">
+          <h4> <i class="fa-solid"></i> Sobre Bot </h4>
+          <hr my-3>
+          <h6 class="eee"><%= bot.shortDesc %></h6>
+          <% if(bot.guild_support){ %>
+            <a href="https://discord.gg/<%= bot.clientGuild %>" class="ee">Servidor de soporte</a>
+           <% } %>
+           <% if(bot.dashboard){ %>
+             <a href="<%= bot.clientDashboard %>" class="ee">Pagina oficial (dashboard)</a>
+           <% } %>
+          </div>
+      </div>
+      
+  </div>
+  </div>

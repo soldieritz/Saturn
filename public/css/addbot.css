@@ -1,0 +1,210 @@
+
+.myc{
+    display: flex;
+  
+  }
+  .myc .container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: auto
+  }
+  
+  .myc .container .bot-card{
+    width: 250px;
+    height: 370px;
+    border-radius: 8px;
+    margin: 6px;
+    text-align: center;
+    background-color:#1b1b1b; 
+  }
+  .card-img-top{
+    width: 100%;
+    height: 87%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  }
+  .myc .container .bot-card .bot-banner {
+  width: 100%;
+    height: 180px;
+      display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+  }
+  .myc .container .bot-card .te{
+    word-wrap: break-word;
+    width: 100%;
+    overflow: hidden;
+    margin: 2px;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 4;
+   display: -webkit-box;
+  }
+  .myc .container .bot-card .te2{
+    word-wrap: break-word;
+    width: 100%;
+    overflow: hidden;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   display: -webkit-box;
+  }
+  .myc .container .bot-card .viewbot{
+    background-color: #2e2e2e;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  .myc .container .bot-card .resend{
+    background-color: #2e2e2e;;
+    border-radius: 4px;
+      padding: 5px;
+      margin: 10px;
+      text-decoration: none;
+      margin-top: 110px;
+      position: absolute;
+      width: 110px;
+  }
+  .myc .container .bot-card .resend:hover{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(204,24,24,1) 0%, rgba(255,115,0,1) 100%);
+    color: white;
+}
+
+
+  .myc .container .bot-card .viewbot, .editbot {
+    padding: 5px;
+    margin: 10px;
+    text-decoration: none;
+    margin-top: 147px;
+    position: absolute;
+    width:118px;
+  }
+  .my .container .bot-card .editbot{
+        width: 60px;
+        transition: 500ms all;
+  }
+  .myc .container .bot-card .deletebot  {
+     margin-top: 147px;
+     background-color: var(--background);
+     color: white;
+     outline: none;
+     border: 0px;
+     width: 60px;
+     transition: 500ms all;
+   }
+
+   .myc .container .bot-card .editbot  {
+    width:60px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(204,24,24,1) 0%, rgba(255,115,0,1) 100%);
+    color: white;
+    margin-top: 147px;
+    &:hover{
+     background-color: #0d6efd;
+     transition: 500ms all;
+    }
+  }
+  .myc .container .bot-card .invitebot {
+    background-color: #2e2e2e;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .myc .container .bot-card .invitebot:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(204,24,24,1) 0%, rgba(255,115,0,1) 100%);
+    color: white;
+  }
+  .myc .container .bot-card .viewbot:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(204,24,24,1) 0%, rgba(255,115,0,1) 100%);
+    color: white;
+  }
+
+  .myc .container .bot-card .invitebot, .deletebot {
+     padding: 5px;
+     margin: 120px;
+     text-decoration: none;
+     margin-top: 147px;
+     position: absolute;
+     width:119px;
+   }
+
+   .myc .container .bot-card .deletebot {
+    padding: 5px;
+    margin: 164px;
+    text-decoration: none;
+    margin-top: 147px;
+    position: absolute;
+    width:60px;
+
+    &:hover{
+      background-color: rgb(255, 65, 65);
+      transition: 500ms all;
+    }
+  }
+  .myc .container .bot-card .viewbotprofile, .deletebot, .editbot{
+    border-radius: 10px;
+  }
+   .myc .container .bot-card .viewbotprofile {
+
+    background-color: var(--background);
+    color: white;
+    transition: 500ms all;
+     padding: 5px;
+     margin: 88px;
+     text-decoration: none;
+     margin-top: 147px;
+     position: absolute;
+     width:60px;
+     &:hover{
+      background-color: #ff8800;
+      transition: 500ms all;
+     }
+   }
+
+
+  .myc .container .bot-card .bot-avatar{
+  width: 53px;
+    height: 53px;
+    border-radius: 100%;
+    transform: translateY(-28px) translateX(-8px);
+    position: absolute;
+  margin: 0px;
+    padding: 0px;
+  }
+  
+  .myc .container .bot-card h5{
+  margin: 2px;
+    padding: 0 0.79rem;
+    color:  #0d6efd;
+  }
+  .myc .container .bot-card p{
+  padding: 0px 1rem;
+    font-size: 14px;
+    margin-bottom: 0rem;
+  }
+  
+  .banner{
+    border-top-left-radius: 8px;border-top-right-radius: 8px; height: 157px
+  }
+  
+  @media screen and (max-width: 564px){
+  .myc{
+    display: inline-block
+  }
+    .myc .container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+  }
+
+  
