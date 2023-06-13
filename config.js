@@ -1,5 +1,5 @@
 module.exports = {
-    url: "http://127.0.0.1:3000",
+    url: "https://saturnlist.onrender.com",
     client: {
         id: "1117114618331009144",
         token: process.env.token,
