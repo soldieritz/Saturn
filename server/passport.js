@@ -3,7 +3,7 @@ const { Strategy } = require("passport-discord");
 const config = require("../config");
 let clientID = config.client.id;
 let clientSecret = config.client.secret;
-let callbackURL = "http://127.0.0.1:3000/login";
+let callbackURL = config.url + "/login";
 let scope = config.client.scope;
 passport.serializeUser((user, done) => {
   done(null, user);
