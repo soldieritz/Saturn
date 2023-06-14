@@ -21,12 +21,13 @@ router.get("/user/:id", async (req, res) => {
       profileAvatar = `https://cdn.discordapp.com/avatars/${usuario.id}/${usuario.avatar}.gif`
     } else {
       profileAvatar = `https://cdn.discordapp.com/avatars/${usuario.id}/${usuario.avatar}.jpeg`
-    }
-    res.render("user", {usuario, user: req.user, profileAvatar, bots});
-  });
-} else {
+    } 
+    } else {
            profileAvatar = usuario.defaultAvatarURL;
            }
+    res.render("user", {usuario, user: req.user, profileAvatar, bots});
+  });
+}
   
   router.get("/login", passport.authenticate("discord"),async (req, res) => {
     if(req.user){
