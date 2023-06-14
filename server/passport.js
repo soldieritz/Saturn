@@ -3,7 +3,6 @@ const { Strategy } = require('passport-discord')
 const DiscordOauth2 = require("discord-oauth2");
 const Discord = require('discord.js')
 const { MessageEmbed } = require('discord.js')
-const client = require('../bot.js')
 const oauth = new DiscordOauth2();
 const config = require("../config");
 let clientId = config.client.id;
