@@ -12,38 +12,7 @@
 <br>
 <!----------------------------------Avatar y Informacion ------------------------------------------>
 <div class="row">
-  <div class="col" id="a">
-      <h4>
-        <p style="color: white"><i class="fa-solid fa-arrow-circle-up"></i> <%= votes %></p>  <%= bot.clientInfo.username %>#<%= bot.clientInfo.discriminator %> 
-      </h4>
-      <div class="btn-group" role="group" aria-label="Basic example">
-      <a href="https://discord.com/api/oauth2/authorize?client_id=<%= bot.clientInfo.id %>&permissions=51530719690689&scope=bot%20applications.commands" class="btn btn-primary"style="border-radius: 3px;margin: 3px">Invitar</a>
-      <form action="/bot/<%= bot.clientId %>/vote" id="confirmVote" method="post">
-        <button class="btn btn-primary" type="submit" style="border-radius: 3px;margin: 3px">Votar</button>
-      </form>
-      </div>
-      <hr my-3>
-      <div class="row">
-        <div class="col">
-        <h6 class="items-row"><i class="fa-solid fa-vial"></i> Prefix: <br> 
-            <%= bot.prefix %>
-        </h6>
-        </div>
-        <div class="col">
-          <h6 class="items-row"><i class="fa-solid fa-crown"></i> Creador: <br> <a href=""><%= bot.author.username %>#<%=bot.author.discriminator%></a></h5>
-        </div>
-        <div class="col">
-          <h6 class="items-row text-truncate"><i class="fa-solid fa-hashtag"></i> Tags: <br>
-          <%bot.tags.forEach((tag) => {%>
-            <a href="/tag/<%= tag %>" class="tag">#<%= tag %></a>
-          <%})%>
-          </h6>
-        </div>
-      </div>
-  </div>
-</div>
-<br>
-<div class="row" style="text-align: left;">
+
   <div class="col" id="a">
     <div class="info-separador">
       <h4> <i class="fa-solid"></i> Creador </h4>
@@ -69,15 +38,51 @@
         <% } %>
        </div>
    </div>
+  <div class="col" id="a">
+      <h4>
+        <p style="color: white"><i class="fa-solid fa-arrow-circle-up"></i> <%= votes %></p>  <%= bot.clientInfo.username %>#<%= bot.clientInfo.discriminator %> 
+      </h4>
+      <div class="btn-group" role="group" aria-label="Basic example">
+      <a href="https://discord.com/api/oauth2/authorize?client_id=<%= bot.clientInfo.id %>&permissions=51530719690689&scope=bot%20applications.commands" class="btn btn-primary"style="border-radius: 3px;margin: 3px">Invitar</a>
+      <form action="/bot/<%= bot.clientId %>/vote" id="confirmVote" method="post">
+        <button class="btn btn-primary" type="submit" style="border-radius: 3px;margin: 3px">Votar</button>
+      </form>
+      </div>
+      <hr my-3>
+      <div class="row">
+        <div class="col">
+        <h6 class="items-row"><i class="fa-solid fa-vial"></i> Prefix: <br> 
+            <%= bot.prefix %>
+        </h6>
+        </div>
+        <div class="col">
+          <h6 class="items-row" style="background-color: black"><i class="fa-solid fa-crown"></i> Creador: <br> <a href=""><%= bot.author.username %>#<%=bot.author.discriminator%></a></h5>
+        </div>
+        <div class="col">
+          <h6 class="items-row text-truncate"><i class="fa-solid fa-hashtag"></i> Tags: <br>
+          <%bot.tags.forEach((tag) => {%>
+            <a href="/tag/<%= tag %>" class="tag">#<%= tag %></a>
+          <%})%>
+          </h6>
+        </div>
+      </div>
   </div>
+</div>
+<br>
+
 </div>
 </div>
 <br>
 <!----------------------------------Descripcion y otros ------------------------------------------>
 <div class="container text-center">
+  <div class="inf" style="width: 100%;padding: 10px; border-radius: 10px; background-color: #1b1b1b">
+    <h4><i class="fa-solid fa-message"></i> Descripcion</h4>
+  </div>
+  <p></p>
   <div class="row">
     <div class="col descRow">
       <h5 style="text-align: left; color: white; padding: 20px; overflow: auto;height: 460px; border-radius: 0px;word-break: break-all; background-color: rgba(0, 0, 0, 0.2);font-size: 17px"><code style="color: white; white-space: pre-wrap"><%= bot.desc %></code></h5>
     </div>
     </div>
   </div>
+  <br>
