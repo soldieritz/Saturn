@@ -42,39 +42,42 @@
       </div>
   </div>
 </div>
+<br>
+<div class="row" style="text-align: left;">
+  <div class="col" id="a">
+    <div class="info-separador">
+      <h4> <i class="fa-solid"></i> Creador </h4>
+      <hr my-3>
+      <div class="chip">
+       <img src="<%= userAvatar %>" alt="Person" width="96" height="96">
+       <%= bot.author.username %>#<%= bot.author.discriminator %>
+     </div>
+     <br>
+     </div>
+     <!------------------------------------------------------->
+     <br>
+     <div class="info-separador">
+       <h4> <i class="fa-solid"></i> Sobre Bot </h4>
+       <hr my-3>
+       <h6 class="eee"><%= bot.shortDesc %></h6>
+       <br>
+       <% if(bot.guild_support){ %>
+         <a href="https://discord.gg/<%= bot.guild_support %>" class="ee"><i class="fa-brands fa-discord"></i> Servidor de soporte</a>
+        <% } %>
+        <% if(bot.dashboard){ %>
+          <a href="<%= bot.clientDashboard %>" class="ee"><i class="fa-solid fa-link"></i> Pagina oficial (dashboard)</a>
+        <% } %>
+       </div>
+   </div>
+  </div>
+</div>
 </div>
 <br>
 <!----------------------------------Descripcion y otros ------------------------------------------>
 <div class="container text-center">
   <div class="row">
-    <div class="col-sm-8 descRow">
+    <div class="col descRow">
       <h5 style="text-align: left; color: white; padding: 20px; overflow: auto;height: 460px; border-radius: 0px;word-break: break-all; background-color: rgba(0, 0, 0, 0.2);font-size: 17px"><code style="color: white; white-space: pre-wrap"><%= bot.desc %></code></h5>
     </div>
-    <div class="col-sm-4 descRow">
-      <div class="info-content">
-      <div class="info-separador">
-         <h4> <i class="fa-solid"></i> Creador </h4>
-         <hr my-3>
-         <div class="chip">
-          <img src="<%= userAvatar %>" alt="Person" width="96" height="96">
-          <%= bot.author.username %>#<%= bot.author.discriminator %>
-        </div>
-        <br>
-        </div>
-        <!------------------------------------------------------->
-        <br>
-        <div class="info-separador">
-          <h4> <i class="fa-solid"></i> Sobre Bot </h4>
-          <hr my-3>
-          <h6 class="eee"><%= bot.shortDesc %></h6>
-          <% if(bot.guild_support){ %>
-            <a href="https://discord.gg/<%= bot.clientGuild %>" class="ee">Servidor de soporte</a>
-           <% } %>
-           <% if(bot.dashboard){ %>
-             <a href="<%= bot.dashboard %>" class="ee">Pagina oficial (dashboard)</a>
-           <% } %>
-          </div>
-      </div>
-      
-  </div>
+    </div>
   </div>
