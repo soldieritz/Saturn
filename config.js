@@ -1,4 +1,5 @@
 module.exports = {
+    guild: "1117442169918214304",
     url: "https://saturnlist.onrender.com",
     client: {
         id: "1117114618331009144",
