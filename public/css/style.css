@@ -134,10 +134,10 @@ text-decoration: underline;
   }
 
 
-.ee, .eee{
+.eee{
   text-decoration: none;
-  background-color: #1b1b1b;
-  padding: 6px;
+  background-color: #0f0f0f;
+  padding: 10px;
   display: block;
  margin: 3px
 }
@@ -161,3 +161,16 @@ text-decoration: underline;
 }
 
 
+.ee{
+    background-color: #0f0f0f;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 400ms all;
+    display: inline-block;
+    width: 45%;
+    word-wrap: break-word;
+}
+.ee:hover{
+    background-color: #2f3136;
+    transition: 400ms all;
+}
