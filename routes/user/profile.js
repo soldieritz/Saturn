@@ -16,6 +16,7 @@ router.get("/user/:id", async (req, res) => {
     const usuario = await client.users.fetch(us.userId).catch(error => null)
     const bots = await Bots.find({ "author.id": us.userId })
     let profileAvatar;
+    if(usuario.avatar){
     if(usuario.avatar.substring(0,2) === "a_"){
       profileAvatar = `https://cdn.discordapp.com/avatars/${usuario.id}/${usuario.avatar}.gif`
     } else {
@@ -23,6 +24,9 @@ router.get("/user/:id", async (req, res) => {
     }
     res.render("user", {usuario, user: req.user, profileAvatar, bots});
   });
+} else {
+           profileAvatar = usuario.defaultAvatarURL;
+           }
   
   router.get("/login", passport.authenticate("discord"),async (req, res) => {
     if(req.user){
