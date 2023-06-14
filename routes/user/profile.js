@@ -27,7 +27,7 @@ router.get("/user/:id", async (req, res) => {
            }
     res.render("user", {usuario, user: req.user, profileAvatar, bots});
   });
-}
+})
   
   router.get("/login", passport.authenticate("discord"),async (req, res) => {
     if(req.user){
