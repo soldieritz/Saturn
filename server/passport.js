@@ -35,7 +35,7 @@ passport.use(new Strategy({
   process.nextTick(() => {
     return cb(null, profile)
   })
-}))
+})
 );
 
 module.exports = passport;
